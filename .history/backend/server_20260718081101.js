@@ -22,6 +22,7 @@ app.use(cors({
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(morgan('dev'));
+
 // Add after app.use(morgan('dev'));
 
 // Cache headers for static-ish data (reduces repeat DB hits)
