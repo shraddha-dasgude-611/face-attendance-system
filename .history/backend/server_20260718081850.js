@@ -16,7 +16,7 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'http://localhost:5174',
-    'https://face-attendance-system-git-main-shraddha82.vercel.app',  // ← replace with your Vercel URL
+    '',  // ← replace with your Vercel URL
   ],
   credentials: true
 }));
