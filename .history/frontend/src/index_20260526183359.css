@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Custom styles */
+.face-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video-container {
+  position: relative;
+  display: inline-block;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.scanning-ring {
+  animation: pulse-ring 1.5s infinite;
+}
