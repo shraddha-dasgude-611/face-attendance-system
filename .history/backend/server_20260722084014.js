@@ -11,25 +11,7 @@ connectDB();
 
 const app = express();
 
-app.use(cors({
-  origin: function(origin, callback) {
-    // Allow all vercel.app URLs + localhost
-    const allowedOrigins = [
-      'http://localhost:5173',
-      'http://localhost:5174',
-    ];
-    
-    // Allow any vercel.app subdomain
-    if (!origin || 
-        allowedOrigins.includes(origin) || 
-        origin.endsWith('.vercel.app')) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true
-}));
+
 
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
